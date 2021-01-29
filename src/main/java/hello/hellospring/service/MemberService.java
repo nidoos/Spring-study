@@ -5,10 +5,13 @@ import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+
+@Transactional  //jpa를 쓰려면 트랜잭션이 있어야한다. 그렇기 때문에 서비스계층에 @Transactional 적어둔다. 데이터를 저장하거나 변경할 때 있어야함.
 //@Service
 public class MemberService {
 
